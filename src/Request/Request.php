@@ -75,7 +75,7 @@ class Request extends BaseRequest
     protected function buildBody()
     {
         $message = [
-            'to' => $this->getTo(),
+            'to' => json_encode($this->getTo()),
             'registration_ids' => $this->getRegistrationIds(),
             'notification' => $this->getNotification(),
             'data' => $this->getData(),
